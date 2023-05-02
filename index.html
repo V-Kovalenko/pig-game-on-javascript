@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/scss/reset.css">
+</head>
+<body>
+    <div class="container container_active">
+        <div class="header">
+            <button class="header__button btn">НОВАЯ ИГРА</button>
+        </div>
+        <div class="main">
+            <div class="main__sides side">
+                <div id="player-0" class="side__header">ИГРОК 1</div>
+                <div id="count-0" class="side__count-left">0</div>
+                <div class="side__current-points">
+                    <p class="side__p">ТЕКУЩИЕ ОЧКИ</p>
+                    <p id="current-0" class="side__p-left">0</p>
+                </div>
+            </div>
+            <div class="main__middle middle">
+               <div class="middle__image">
+                   <img class="middle__dice" src="./assets/img/dice1.png" alt="cube">
+               </div>
+                <button class="middle__quit btn">
+                    БРОСИТЬ КУБИК
+                </button>
+                <button class="middle__leave btn">ОСТАВИТЬ</button>
+            </div>
+            <div class="main__sides side">
+                <div id="player-1" class="side__header">ИГРОК 2</div>
+                <div id="count-1" class="side__count-right">0</div>
+                <div class="side__current-points">
+                    <p class="side__p">ТЕКУЩИЕ ОЧКИ</p>
+                    <p id="current-1" class="side__p-right">0</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
