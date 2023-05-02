@@ -1,8 +1,6 @@
 const elementScore0 = document.querySelector('#count-0')
 const elementScore1 = document.querySelector('#count-1')
 const elementDice = document.querySelector('.middle__dice')
-const elementCurrentScore0 = document.querySelector('#current-0')
-const elementCurrentScore1 = document.querySelector('#current-1')
 const color = document.querySelector('.container')
 //btn
 const btnNew = document.querySelector('.header__button')
@@ -40,7 +38,6 @@ btnQuit.addEventListener('click', function () {
         document.querySelector(`#current-${activePlayer}`).textContent = currentScore
 
     } else {
-        // !activePlayer? color.classList.remove('container_active') :color.classList.add('container_active')
         switchActivePlayer()
     }
 })
@@ -48,7 +45,7 @@ btnQuit.addEventListener('click', function () {
 btnLeave.addEventListener('click', function () {
     totalScore[activePlayer] += currentScore
     document.querySelector(`#count-${activePlayer}`).textContent = totalScore[activePlayer]
-    if (totalScore[activePlayer] >= 10) {
+    if (totalScore[activePlayer] >= 100) {
         document.querySelector(`#count-${activePlayer}`).textContent = 'Victory!!!'
         btnQuit.disabled = true
         btnLeave.disabled = true
@@ -73,10 +70,4 @@ btnNew.addEventListener('click', function () {
     document.querySelector(`#count-${activePlayer}`).textContent = 0
     document.querySelector(`#current-${activePlayer}`).textContent = 0
     totalScore[activePlayer] = 0
-
-
 })
-
-
-
-
